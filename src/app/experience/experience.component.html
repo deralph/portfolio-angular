@@ -1,0 +1,27 @@
+<section id="experience">
+  <p class="section__text__p1">Explore My</p>
+  <h1 class="title">Experience</h1>
+  <div class="experience-details-container">
+    <div class="about-containers">
+      <div class="details-container">
+        <h2 class="experience-sub-title">Frontend Development</h2>
+        <div class="article-container">
+          <div *ngFor="let skill of skills1">
+            <app-experiencebox [skill]="skill"></app-experiencebox>
+          </div>
+        </div>
+      </div>
+      <div class="details-container">
+        <h2 class="experience-sub-title">Frontend Development</h2>
+        <div class="article-container">
+          <div *ngFor="let skill of skills2">
+            <app-experiencebox
+              [skill]="skill"
+              (outputEvent)="handleEmittedEvent($event)"
+            ></app-experiencebox>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
